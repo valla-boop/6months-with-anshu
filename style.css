@@ -101,3 +101,22 @@ transform:translateY(100vh);
 transform:translateY(-100px);
 }
 }
+.click-heart{
+position:fixed;
+pointer-events:none;
+font-size:24px;
+animation:popHeart 1s forwards;
+z-index:9999;
+}
+
+@keyframes popHeart{
+0%{
+opacity:1;
+transform:translate(-50%,-50%) scale(0.5);
+}
+
+100%{
+opacity:0;
+transform:translate(-50%,-150px) scale(2);
+}
+}
