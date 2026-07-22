@@ -186,3 +186,22 @@ And here's to every month after this one.
 `;
 
 }
+for(let i=0;i<25;i++){
+
+let heart=document.createElement("div");
+
+heart.innerHTML="❤️";
+
+heart.classList.add("heart");
+
+heart.style.left=Math.random()*100+"vw";
+
+heart.style.animationDuration=
+(4+Math.random()*4)+"s";
+
+heart.style.fontSize=
+(15+Math.random()*20)+"px";
+
+document.body.appendChild(heart);
+
+}
