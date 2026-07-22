@@ -158,6 +158,31 @@ When I think about the future, I always see you in it. I think about the day we'
 function page5(){
 
 confettiBlast();
+  for(let i=0;i<100;i++){
+
+setTimeout(()=>{
+
+let heart=document.createElement("div");
+
+heart.innerHTML="❤️";
+
+heart.className="click-heart";
+
+heart.style.left=
+(Math.random()*window.innerWidth)+"px";
+
+heart.style.top=
+(Math.random()*window.innerHeight)+"px";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},1500);
+
+},i*30);
+
+}
 
 content.innerHTML=`
 
@@ -205,3 +230,22 @@ heart.style.fontSize=
 document.body.appendChild(heart);
 
 }
+document.addEventListener("click",(e)=>{
+
+let heart=document.createElement("div");
+
+heart.innerHTML="❤️";
+
+heart.className="click-heart";
+
+heart.style.left=e.clientX+"px";
+
+heart.style.top=e.clientY+"px";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},1000);
+
+});
